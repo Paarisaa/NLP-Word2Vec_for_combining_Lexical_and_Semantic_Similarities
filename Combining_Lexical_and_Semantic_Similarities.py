@@ -59,14 +59,6 @@ def preprocess_text(raw_text):
     return words #(" ".join(words))
 
 
-#-----------------------------------------------------------------------------
-#TODO : This is related to classifiers and might be modified
-def grid_search_hyperparam_space(params, pipeline, folds, training_texts, training_classes):#folds, x_train, y_train, x_validation, y_validation):
-        grid_search = GridSearchCV(estimator=pipeline, param_grid=params, refit=True, cv=folds, return_train_score=False, scoring='accuracy',n_jobs=-1)
-        grid_search.fit(training_texts, training_classes)
-        return grid_search
-#-----------------------------------------------------------------------------
-
 
 if __name__ == '__main__':
     #Load the data
